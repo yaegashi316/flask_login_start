@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>signup</h1>
-    <form action="/signup" method="post">
-        <input type="text" name="name" placeholder="name">
-        <input type="password" name="password" placeholder="password">
-        <input type="submit" value="signup">
-    </form>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block content %}
+<h1 class="mt-5 mb-3">signup</h1>
+<div class="input-group mb-5">
+    <input type="text" name="name" class="form-control" placeholder="name" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<div class="input-group mb-3">
+    <input type="text" name="password" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<form action="/signup" method="post">
+</form>
+<div class="container">
+    <div class="row">
+        <div class="col-4 ofset-4">
+        <!-- 左右3つず、中央が6 -->
+            <input type="text" name="name" placeholder="name">
+            <input type="password" name="password" placeholder="password">
+            <input type="submit" value="signup" class="btn btn-danger">
+        </div>
+    </div>
+</div>
+{% endblock %}
